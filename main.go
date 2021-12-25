@@ -82,7 +82,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	resp := map[string]interface{}{
 		"message":       "file uploaded",
-		"file_location": result,
+		"file_location": result.Location,
 	}
 	json.NewEncoder(w).Encode(resp)
 
